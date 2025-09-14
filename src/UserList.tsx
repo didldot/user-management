@@ -11,6 +11,7 @@ function UserList({users, onClick}: UserListProps){
 
     return(
         <div>
+            <h2>Benutzerprofil</h2>
             {users.map( (user, index)  => (
                 <UserCard user={user} onClick={onClick} key={user.email}></UserCard>
             ))}

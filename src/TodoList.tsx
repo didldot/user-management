@@ -39,7 +39,7 @@ function TodoList({todoItems}: TodoListProps){
 
     return(
         <div className="todo-list-container">
-            <h1>TODO LIST</h1>
+            <h2>Todo List</h2>
             <div className="input-section">
                 <input
                     type="text"
