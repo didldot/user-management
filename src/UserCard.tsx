@@ -9,7 +9,6 @@ function UserCard({user, onClick}: UserCardProps){
     
     const {name, email, avatarUrl} = user;
 
-
     return(
         <div className="user-card" onClick={() => onClick(user)}>
             <img src={avatarUrl} alt={`Avatar of ${name}`} className="user-avatar"  />
