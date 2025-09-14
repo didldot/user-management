@@ -1,24 +1,27 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TodoList from './TodoList';
+import { todoItemsDefault } from './Todo';
+import UserCard from './UserCard';
+import { defaultUser, defaultUsers, User } from './User';
+import UserList from './UserList';
 
 function App() {
+
+
+  function handleUserClick(user: User){
+    alert(`Du hast auf User ${user.name} geklickt.`);
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Benutzerprofil</h2>
+      <UserList users={defaultUsers} onClick={handleUserClick}></UserList>
+
+      <h2>Todo Liste</h2>
+      <TodoList todoItems={todoItemsDefault}></TodoList>
     </div>
   );
 }
